@@ -66,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: .github/android/setup_env.bash
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: apk
           path: download-artifacts
@@ -103,12 +103,12 @@ jobs:
         with:
           ruby-version: ${{ steps.setup.outputs.ruby-version }}
       - name: Download an aab file
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: aab
           path: download-artifacts
       - name: Download an apk file
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: apk
           path: download-artifacts
